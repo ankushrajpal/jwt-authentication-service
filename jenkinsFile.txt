@@ -1,0 +1,18 @@
+pipeline {
+agent any
+
+tools {
+maven "MAVEN"
+jdk "JDK"
+git "Default"
+}
+stages {
+stage('Build') {
+steps {
+
+sh 'mvn -B -DskipTests install'
+
+}
+}
+}
+}
