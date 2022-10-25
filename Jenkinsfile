@@ -23,9 +23,9 @@ pipeline {
 
         stage ('Deployment Stage') {
             steps {
-                withMaven(maven : 'apache-maven-3.8.6') {
-                    bat 'mvn deploy'
-                }
+                
+                    bat 'java -jar *.jar'
+                
             }
         }
     }
