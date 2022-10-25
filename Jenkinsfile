@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 
-                    bat 'java -jar *.jar'
+                    bat 'mvn spring-boot:run'
                 
             }
         }
