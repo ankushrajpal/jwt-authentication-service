@@ -19,6 +19,15 @@ pipeline {
                 }
             }
         }
+        
+        stage ('Testing Stage') {
+
+            steps {
+                withMaven(maven : 'apache-maven-3.8.6') {
+                    bat 'mvn package'
+                }
+            }
+        }
 
 
         stage("Publish to Nexus Repository Manager") {
