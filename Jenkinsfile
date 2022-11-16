@@ -20,7 +20,7 @@ pipeline {
             }
         }
         
-        stage ('Testing Stage') {
+        stage ('Packaging Stage') {
 
             steps {
                 withMaven(maven : 'apache-maven-3.8.6') {
